@@ -13,6 +13,6 @@ public class Time {
     }
 
     public long getTime(){
-        return startTime - endTime;
+        return endTime - startTime;
     }
 }

@@ -18,9 +18,12 @@ public class CollectionTest<T> {
         }
     }
 
-    public void mytGet(List<T> list, int index){
+    public void mytGet(List<T> list, int count){
         try {
-            System.out.println(list.get(index - 1).toString());
+            for (int i = 0; i < count; i++) {
+                String value = list.get(i).toString();
+                //System.out.println(list.get(count - 1).toString());
+            }
         }
         catch (IndexOutOfBoundsException e){
             System.err.println("Ошибка: попытка получить значения за пределами листа.");
