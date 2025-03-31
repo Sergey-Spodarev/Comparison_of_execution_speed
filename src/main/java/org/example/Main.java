@@ -9,45 +9,56 @@ import java.util.List;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int iterations = 1000;
+        final int iterations = 1000;
 
         List<Integer> arrayList = new ArrayList<>();
         List<Integer> linkedList = new LinkedList<>();
 
-        CollectionTest tester = new CollectionTest();
+        Collection<Integer> tester = new Collection<>();
         Time stopwatch = new Time();
 
         System.out.println("Testing add...");
         stopwatch.start();
-        tester.myAdd(arrayList, iterations);
+        for (int i = 0; i < iterations; i++) {
+            tester.myAdd(arrayList, i);
+        }
         stopwatch.stop();
         System.out.println("ArrayList add time: " + stopwatch.getTime() + " ms");
 
         stopwatch.start();
-        tester.myAdd(linkedList, iterations);
+        for (int i = 0; i < iterations; i++) {
+            tester.myAdd(linkedList, i);
+        }
         stopwatch.stop();
         System.out.println("LinkedList add time: " + stopwatch.getTime() + " ms");
 
-
         System.out.println("Testing get...");
         stopwatch.start();
-        tester.mytGet(arrayList, iterations);
+        for (int i = 0; i < iterations; i++) {
+            tester.mytGet(arrayList, i);
+        }
         stopwatch.stop();
         System.out.println("ArrayList get time: " + stopwatch.getTime() + " ms");
 
         stopwatch.start();
-        tester.mytGet(linkedList, iterations);
+        for (int i = 0; i < iterations; i++) {
+            tester.mytGet(linkedList, i);
+        }
         stopwatch.stop();
         System.out.println("LinkedList get time: " + stopwatch.getTime() + " ms");
 
         System.out.println("Testing delete...");
         stopwatch.start();
-        tester.myDelete(arrayList, iterations);
+        for (int i = iterations - 1; i >= 0; i--) {
+            tester.myDelete(arrayList, i);
+        }
         stopwatch.stop();
         System.out.println("ArrayList delete time: " + stopwatch.getTime() + " ms");
 
         stopwatch.start();
-        tester.myDelete(linkedList, iterations);
+        for (int i = iterations - 1; i >= 0; i--) {
+            tester.myDelete(linkedList, i);
+        }
         stopwatch.stop();
         System.out.println("LinkedList delete time: " + stopwatch.getTime() + " ms");
     }
