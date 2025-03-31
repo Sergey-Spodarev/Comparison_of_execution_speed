@@ -42,8 +42,6 @@ public class CollectionTest {
         final int value = collection.mytGet(arrayList, 3);
         collection.myDelete(arrayList, 2);
         assertEquals(value, arrayList.get(2));
-        //тут бы написал так чтобы была проверка что мы можем или нет удалить эллемент за пределами листа
-        //assertEquals(value, arrayList.size(), "Размер списка должен быть равен 5 после удаления");
     }
 
     @Test

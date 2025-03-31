@@ -1,7 +1,6 @@
 package TimeCalculation;
 
 import java.util.List;
-import java.util.Random;
 
 /**
  * Класс, который работает со всеми подтипами List и выполняет стандартные методы
